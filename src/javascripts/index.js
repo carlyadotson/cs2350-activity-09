@@ -9,7 +9,7 @@ import 'bootstrap'
 
 function displayCard(c){
     return `
-   <div class="card" data-title"${c.title}">
+   <div class="card" data-title = "${c.title}">
     <img src="${c.poster}" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">${c.title}</h5>
@@ -57,9 +57,9 @@ function displayCards(){
 function addNewCard(event){
     if(event) event.preventDefault()
 
-    let t = document.querySelector('#title'.value)
-    let d = document.querySelector('#description'.value)
-    let p = document.querySelector('#poster'.value)
+    let t = document.querySelector('#title').value
+    let d = document.querySelector('#description').value
+    let p = document.querySelector('#poster').value
 
     let cards = JSON.parse(localStorage.getItem('cards') || '[]')
 
